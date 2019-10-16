@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xWK-Fw-MJY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--StateViewController-->
+        <scene sceneID="PLh-yu-VSt">
+            <objects>
+                <tableViewController title="StateViewController" id="ibr-M4-ggT" customClass="StateViewController" customModule="StateAdvisor" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WN4-Gv-yd4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QIN-Yi-iAc">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QIN-Yi-iAc" id="O9O-UE-hyG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ibr-M4-ggT" id="sG0-oa-nHO"/>
+                            <outlet property="delegate" destination="ibr-M4-ggT" id="yxl-Rf-fgd"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="UIW-cq-ugd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vSh-PJ-haY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-83" y="-183"/>
+        </scene>
+        <!--TabBarController-->
+        <scene sceneID="H9t-Mk-mYU">
+            <objects>
+                <tabBarController title="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="xWK-Fw-MJY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xch-dt-LYv">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ibr-M4-ggT" kind="relationship" relationship="viewControllers" id="s35-CM-NC4"/>
+                        <segue destination="maY-Uj-eDJ" kind="relationship" relationship="viewControllers" id="zyx-RK-ro7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7GO-aM-t14" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="223"/>
+        </scene>
+        <!--MapViewController-->
+        <scene sceneID="JTN-fK-brx">
+            <objects>
+                <viewController title="MapViewController" id="maY-Uj-eDJ" customClass="MapViewController" customModule="StateAdvisor" customModuleProvider="target" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="knI-ce-Viy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="2yb-LG-2IH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQz-ak-gbG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1461" y="-197"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="64" height="60"/>
+        <image name="map.fill" catalog="system" width="64" height="54"/>
+    </resources>
+</document>
