@@ -1,5 +1,5 @@
 //
-//  MapViewController.swift
+//  CityDescriptionViewController.swift
 //  StateAdvisor
 //
 //  Created by Juan Vasquez on 11/26/19.
@@ -8,8 +8,7 @@
 
 import Foundation
 import UIKit
-import MapKit
 
-class MapViewController: UIViewController {
+class CityDescriptionViewController: UIViewController {
     
 }

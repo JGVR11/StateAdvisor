@@ -15,8 +15,9 @@
 		A8873A7B2356493D00AA0365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8873A792356493D00AA0365 /* LaunchScreen.storyboard */; };
 		A8873A862356493E00AA0365 /* StateAdvisorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8873A852356493E00AA0365 /* StateAdvisorTests.swift */; };
 		A8873A912356493E00AA0365 /* StateAdvisorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8873A902356493E00AA0365 /* StateAdvisorUITests.swift */; };
-		A8873A9F235649AD00AA0365 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8873A9E235649AD00AA0365 /* MapViewController.swift */; };
-		A8873AA12356548F00AA0365 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8873AA02356548F00AA0365 /* States.swift */; };
+		A8AE7FA3238DF2C4007AC14B /* StateDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA2238DF2C4007AC14B /* StateDescriptionViewController.swift */; };
+		A8AE7FA5238DF2EA007AC14B /* CityDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA4238DF2EA007AC14B /* CityDescriptionViewController.swift */; };
+		A8AE7FA7238DF452007AC14B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA6238DF452007AC14B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +52,9 @@
 		A8873A8C2356493E00AA0365 /* StateAdvisorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StateAdvisorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8873A902356493E00AA0365 /* StateAdvisorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAdvisorUITests.swift; sourceTree = "<group>"; };
 		A8873A922356493E00AA0365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8873A9E235649AD00AA0365 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		A8873AA02356548F00AA0365 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
+		A8AE7FA2238DF2C4007AC14B /* StateDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDescriptionViewController.swift; sourceTree = "<group>"; };
+		A8AE7FA4238DF2EA007AC14B /* CityDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDescriptionViewController.swift; sourceTree = "<group>"; };
+		A8AE7FA6238DF452007AC14B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +108,13 @@
 				A8873A6E2356493B00AA0365 /* AppDelegate.swift */,
 				A8873A702356493B00AA0365 /* SceneDelegate.swift */,
 				A8873A722356493B00AA0365 /* StateViewController.swift */,
+				A8AE7FA2238DF2C4007AC14B /* StateDescriptionViewController.swift */,
+				A8AE7FA4238DF2EA007AC14B /* CityDescriptionViewController.swift */,
+				A8AE7FA6238DF452007AC14B /* MapViewController.swift */,
 				A8873A742356493B00AA0365 /* Main.storyboard */,
 				A8873A772356493D00AA0365 /* Assets.xcassets */,
 				A8873A792356493D00AA0365 /* LaunchScreen.storyboard */,
 				A8873A7C2356493D00AA0365 /* Info.plist */,
-				A8873A9E235649AD00AA0365 /* MapViewController.swift */,
-				A8873AA02356548F00AA0365 /* States.swift */,
 			);
 			path = StateAdvisor;
 			sourceTree = "<group>";
@@ -265,11 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8873AA12356548F00AA0365 /* States.swift in Sources */,
+				A8AE7FA5238DF2EA007AC14B /* CityDescriptionViewController.swift in Sources */,
+				A8AE7FA7238DF452007AC14B /* MapViewController.swift in Sources */,
 				A8873A732356493B00AA0365 /* StateViewController.swift in Sources */,
 				A8873A6F2356493B00AA0365 /* AppDelegate.swift in Sources */,
 				A8873A712356493B00AA0365 /* SceneDelegate.swift in Sources */,
-				A8873A9F235649AD00AA0365 /* MapViewController.swift in Sources */,
+				A8AE7FA3238DF2C4007AC14B /* StateDescriptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
