@@ -9,7 +9,21 @@
 import Foundation
 
 struct Modules {
-    let states = ["Alabama", "Florida", "North Carolina", "Tennessee", "Ohio", "Illinois", "California", "Arizona", "Colorado", "North Dakota", "South Carolina", "Oklahoma", "Minnesota", "Michigan" ]
     
+    let states: [State] = [ State(name:"Tennessee", description: "Green" , cities: [City(name: "Johnson City", imageUrl: "https://en.wikipedia.org/wiki/Johnson_City,_Tennessee#/media/File:Johnson_City.jpg", description: "Pila de aburrido")])]
+    //let states = ["Alabama", "Florida", "North Carolina", "Tennessee", "Ohio", "Illinois", "California", "Arizona", "Colorado", "North Dakota", "South Carolina", "Oklahoma", "Minnesota", "Michigan" ]
     let cities = "Chicago"
 }
+
+struct State {
+    let name: String
+    let description: String
+    let cities: [City]
+}
+
+struct City{
+    let name: String
+    let imageUrl: String
+    let description: String
+}
+

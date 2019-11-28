@@ -11,39 +11,32 @@ import UIKit
 
 class StateDescriptionViewController: UIViewController {
     
-    
-    let cities = Modules()
+    var state: State?
     
     @IBOutlet var stateDescriptionLabel: UILabel!
     
-   var receivedData = ""
     
    // func changeLabelText(){
     //    stateDescriptionLabel.text = "Hello"
   //  }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        // get a reference to the second view controller
-        let cityDescriptionViewController = segue.destination as! CityDescriptionViewController
-
-        // set a variable in the second view controller with the data to pass
-    cityDescriptionViewController.whatever = "Hello"
-    
-    //stateDescriptionViewController.stateDescriptionLabel.text! = "Hello"
-    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.title = state!.name
+        stateDescriptionLabel.text = state!.description
     }
-
+    
+    
     
 }
     extension StateDescriptionViewController: UITableViewDataSource{
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cities.cities.count
+        return state!.cities.count
        }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "citiesCell", for: indexPath)
-        cell.textLabel?.text! = "\(cities.cities)"
+            cell.textLabel?.text! = state!.cities[indexPath.row].name
         
         return cell
     }
@@ -55,20 +48,21 @@ extension StateDescriptionViewController: UITableViewDelegate{
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         // Segue to the second view controller
-       self.performSegue(withIdentifier: "citySegue", sender: self)
+            self.performSegue(withIdentifier: "citySegue", sender: indexPath.row)
       }
         
-        /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
             // get a reference to the second view controller
             let cityDescriptionViewController = segue.destination as! CityDescriptionViewController
 
             // set a variable in the second view controller with the data to pass
-        cityDescriptionViewController.whatever = "Hello"
+            
         
-        //stateDescriptionViewController.stateDescriptionLabel.text! = "Hello"
+          cityDescriptionViewController.city = state!.cities[sender as! Int]
         
-        }*/
+        }
+
     
 }
     

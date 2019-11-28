@@ -166,7 +166,7 @@
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CityImage" translatesAutoresizingMaskIntoConstraints="NO" id="9lc-GK-Cak">
-                                <rect key="frame" x="0.0" y="103" width="414" height="220.00000000000023"/>
+                                <rect key="frame" x="0.0" y="103" width="414" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9lc-GK-Cak" secondAttribute="height" multiplier="79:42" id="0XV-rk-SWS"/>
                                 </constraints>

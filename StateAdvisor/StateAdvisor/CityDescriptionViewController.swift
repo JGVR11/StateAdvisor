@@ -11,8 +11,13 @@ import UIKit
 
 class CityDescriptionViewController: UITabBarController {
     
-    var whatever = "klk"
+    var city: City?
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.title = city!.name
+        
+    }
     
 }

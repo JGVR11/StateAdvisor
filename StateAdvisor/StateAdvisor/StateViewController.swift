@@ -23,16 +23,15 @@ class StateViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatesCell", for: indexPath)
-        cell.textLabel?.text! = "\(states.states)"
+        cell.textLabel?.text! = states.states[indexPath.row].name
         
         return cell
     }
     
     // method to run when table view cell is tapped
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
         // Segue to the second view controller
-        self.performSegue(withIdentifier: "stateSegue", sender: self)
+        self.performSegue(withIdentifier: "stateSegue", sender: indexPath.row)
     }
     
     // This function is called before the segue
@@ -42,7 +41,7 @@ class StateViewController: UITableViewController {
             let stateDescriptionViewController = segue.destination as! StateDescriptionViewController
 
             // set a variable in the second view controller with the data to pass
-        stateDescriptionViewController.receivedData = "Hello"
+        stateDescriptionViewController.state = states.states[sender as! Int]
         
         //stateDescriptionViewController.stateDescriptionLabel.text! = "Hello"
         
