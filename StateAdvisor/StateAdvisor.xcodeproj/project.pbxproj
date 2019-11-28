@@ -18,6 +18,7 @@
 		A8AE7FA3238DF2C4007AC14B /* StateDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA2238DF2C4007AC14B /* StateDescriptionViewController.swift */; };
 		A8AE7FA5238DF2EA007AC14B /* CityDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA4238DF2EA007AC14B /* CityDescriptionViewController.swift */; };
 		A8AE7FA7238DF452007AC14B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA6238DF452007AC14B /* MapViewController.swift */; };
+		A8AE7FA9238F65CB007AC14B /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA8238F65CB007AC14B /* Modules.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A8AE7FA2238DF2C4007AC14B /* StateDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDescriptionViewController.swift; sourceTree = "<group>"; };
 		A8AE7FA4238DF2EA007AC14B /* CityDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDescriptionViewController.swift; sourceTree = "<group>"; };
 		A8AE7FA6238DF452007AC14B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A8AE7FA8238F65CB007AC14B /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				A8873A772356493D00AA0365 /* Assets.xcassets */,
 				A8873A792356493D00AA0365 /* LaunchScreen.storyboard */,
 				A8873A7C2356493D00AA0365 /* Info.plist */,
+				A8AE7FA8238F65CB007AC14B /* Modules.swift */,
 			);
 			path = StateAdvisor;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				A8AE7FA7238DF452007AC14B /* MapViewController.swift in Sources */,
 				A8873A732356493B00AA0365 /* StateViewController.swift in Sources */,
 				A8873A6F2356493B00AA0365 /* AppDelegate.swift in Sources */,
+				A8AE7FA9238F65CB007AC14B /* Modules.swift in Sources */,
 				A8873A712356493B00AA0365 /* SceneDelegate.swift in Sources */,
 				A8AE7FA3238DF2C4007AC14B /* StateDescriptionViewController.swift in Sources */,
 			);

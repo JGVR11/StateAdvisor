@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
-class CityDescriptionViewController: UIViewController {
+class CityDescriptionViewController: UITabBarController {
+    
+    var whatever = "klk"
+    
+    
     
 }
