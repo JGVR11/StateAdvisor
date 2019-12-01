@@ -15,6 +15,7 @@ class CityDescriptionViewController: UITabBarController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         self.title = city!.name
         

@@ -12,6 +12,7 @@ import UIKit
 class StateDescriptionViewController: UIViewController {
     
     var state: State?
+    var cities: [City]?
     
     @IBOutlet var stateDescriptionLabel: UILabel!
     
@@ -22,8 +23,9 @@ class StateDescriptionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        self.title = state!.name
-        stateDescriptionLabel.text = state!.description
+        self.title = "\(state!.name) (\(state!.code))"
+        self.cities = StateAdvisorAPI.fetchStateCities(state: state!)
+        //stateDescriptionLabel.text = state!.description
     }
     
     
@@ -31,12 +33,12 @@ class StateDescriptionViewController: UIViewController {
 }
     extension StateDescriptionViewController: UITableViewDataSource{
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return state!.cities.count
+            return cities!.count
        }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "citiesCell", for: indexPath)
-            cell.textLabel?.text! = state!.cities[indexPath.row].name
+        cell.textLabel?.text! = cities![indexPath.row].name
         
         return cell
     }
@@ -58,8 +60,8 @@ extension StateDescriptionViewController: UITableViewDelegate{
 
             // set a variable in the second view controller with the data to pass
             
-        
-          cityDescriptionViewController.city = state!.cities[sender as! Int]
+           var city = cities![sender as! Int]
+          cityDescriptionViewController.city = cities![sender as! Int]
         
         }
 
