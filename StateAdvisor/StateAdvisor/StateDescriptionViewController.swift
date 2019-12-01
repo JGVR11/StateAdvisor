@@ -31,7 +31,7 @@ class StateDescriptionViewController: UIViewController {
     
     
 }
-    extension StateDescriptionViewController: UITableViewDataSource{
+    extension StateDescriptionViewController: UITableViewDataSource, UITableViewDelegate{
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return cities!.count
        }
@@ -42,9 +42,9 @@ class StateDescriptionViewController: UIViewController {
         
         return cell
     }
-}
+//}
 
-extension StateDescriptionViewController: UITableViewDelegate{
+//extension StateDescriptionViewController: UITableViewDelegate{
     
     // method to run when table view cell is tapped
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -60,7 +60,6 @@ extension StateDescriptionViewController: UITableViewDelegate{
 
             // set a variable in the second view controller with the data to pass
             
-           var city = cities![sender as! Int]
           cityDescriptionViewController.city = cities![sender as! Int]
         
         }
