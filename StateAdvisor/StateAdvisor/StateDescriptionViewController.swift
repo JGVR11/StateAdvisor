@@ -14,7 +14,6 @@ class StateDescriptionViewController: UIViewController {
     var state: State?
     var cities: [City]?
     
-    @IBOutlet var stateDescriptionLabel: UILabel!
     
     
    // func changeLabelText(){
@@ -23,7 +22,7 @@ class StateDescriptionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        self.title = "\(state!.name) (\(state!.code))"
+        self.title = "Cities of \(state!.name) (\(state!.code))"
         self.cities = StateAdvisorAPI.fetchStateCities(state: state!)
         //stateDescriptionLabel.text = state!.description
     }

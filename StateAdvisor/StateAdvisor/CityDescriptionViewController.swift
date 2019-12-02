@@ -12,13 +12,20 @@ import UIKit
 class CityDescriptionViewController: UITabBarController {
     
     var city: City?
-    
+    var places: [Place]?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.title = city?.name
+        PlacesAPI.findNearbyPlaces(city: self.city?, completion: { (PlacesAPI.Result) in
+            switch PlacesAPI.Result{
+            case .success(places):
+                print
+            }
+        })
         
     }
+    
     
 }

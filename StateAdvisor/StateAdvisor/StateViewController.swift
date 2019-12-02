@@ -21,8 +21,8 @@ class StateViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return states!.count
-       }
-
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatesCell", for: indexPath)
         let state = states![indexPath.row]
@@ -33,19 +33,17 @@ class StateViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+        
         self.performSegue(withIdentifier: "stateSegue", sender: indexPath.row)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let stateDescriptionViewController = segue.destination as! StateDescriptionViewController
-
+        let stateDescriptionViewController = segue.destination as! StateDescriptionViewController
+        
         stateDescriptionViewController.state = states![sender as! Int]
         
-        
-        
-        }
-    
     }
+    
+}
 
