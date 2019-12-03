@@ -110,7 +110,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="YSM-A1-GFz" rowHeight="83" style="IBUITableViewCellStyleDefault" id="Bej-Pq-xat">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlacesCell" textLabel="YSM-A1-GFz" rowHeight="83" style="IBUITableViewCellStyleDefault" id="Bej-Pq-xat">
                                         <rect key="frame" x="0.0" y="28" width="414" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bej-Pq-xat" id="SU6-Uy-BiI">
@@ -127,7 +127,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="uYu-0X-ceq" kind="show" identifier="placesSegue" trigger="accessoryAction" id="454-vu-sas"/>
+                                            <segue destination="uYu-0X-ceq" kind="show" identifier="mapSegue" trigger="accessoryAction" id="454-vu-sas"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -149,6 +149,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="CIty Detail" id="Rqh-pG-Q9e"/>
                     <navigationItem key="navigationItem" title="City" id="2PR-sM-fmx"/>
+                    <connections>
+                        <outlet property="tableView" destination="0AB-JC-Bwk" id="BDe-Ol-i5a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxw-Xg-ioZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,7 +178,7 @@
         <!--City Name-->
         <scene sceneID="IkZ-2f-S2M">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sZS-rz-Vi9" customClass="CityDescriptionViewController" customModule="StateAdvisor" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sZS-rz-Vi9" customClass="StateAdvTabBarViewController" customModule="StateAdvisor" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="City Name" id="IWA-ua-GhX"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h4W-3o-XAk">

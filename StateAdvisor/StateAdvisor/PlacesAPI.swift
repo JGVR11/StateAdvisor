@@ -8,33 +8,34 @@
 
 import Foundation
 
+struct Response: Decodable {
+    var results: [ResponsePlace]
+}
+
+struct ResponsePlace: Decodable {
+    var place_id: String
+    var name: String
+    var geometry: ResponseGeometry
+}
+
+struct ResponseGeometry: Decodable {
+    var location: ResponseLocation
+}
+
+struct ResponseLocation: Decodable {
+    var lat: Double
+    var lng: Double
+}
+
+typealias Result = Swift.Result<[Place], Error>
+typealias ResultClosure = (Result) -> Void
+
+
 class PlacesAPI{
     
     private static let apiKey = "AIzaSyBlDd-Jny8xl7sjrTq4wbf5m1IcTpprBdE"
     private static let radius = 250
     private static let rankBy = "prominence"
-    
-    struct Response: Decodable {
-        var results: [ResponsePlace]
-    }
-    
-    struct ResponsePlace: Decodable {
-        var place_id: String
-        var name: String
-        var geometry: ResponseGeometry
-    }
-    
-    struct ResponseGeometry: Decodable {
-        var location: ResponseLocation
-    }
-    
-    struct ResponseLocation: Decodable {
-        var lat: Double
-        var lng: Double
-    }
-    
-    typealias Result = Swift.Result<[Place], Error>
-    typealias ResultClosure = (Result) -> Void
     
     
     static func findNearbyPlaces(city: City, completion: @escaping ResultClosure){
@@ -60,6 +61,9 @@ class PlacesAPI{
             if let error = error {
                 result = Result.failure(error)
             }else if let data = data{
+                if let prettyStr = prettyPrintedJSONString(fromData: data) {
+                                   print("JSON=\n\(prettyStr)")
+                               }
                 let decoder = JSONDecoder()
                 do{
                     
@@ -80,4 +84,15 @@ class PlacesAPI{
         })
         task.resume()
     }
+    
+    private class func prettyPrintedJSONString(fromData data: Data) -> String? {
+        do {
+            let jsonObject = try JSONSerialization.jsonObject(with: data, options: .init(rawValue: 0))
+            let prettyData = try JSONSerialization.data(withJSONObject: jsonObject, options: [.prettyPrinted])
+            return String(data: prettyData, encoding: .utf8)
+        } catch {
+            return nil
+        }
+    }
+    
 }

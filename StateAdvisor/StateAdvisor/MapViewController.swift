@@ -11,5 +11,8 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
+    var city: City?
+    var places: [Place]?
+    var place: Place?
     
 }

@@ -16,13 +16,14 @@
 		A8873A862356493E00AA0365 /* StateAdvisorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8873A852356493E00AA0365 /* StateAdvisorTests.swift */; };
 		A8873A912356493E00AA0365 /* StateAdvisorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8873A902356493E00AA0365 /* StateAdvisorUITests.swift */; };
 		A8AE7FA3238DF2C4007AC14B /* StateDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA2238DF2C4007AC14B /* StateDescriptionViewController.swift */; };
-		A8AE7FA5238DF2EA007AC14B /* CityDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA4238DF2EA007AC14B /* CityDescriptionViewController.swift */; };
+		A8AE7FA5238DF2EA007AC14B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA4238DF2EA007AC14B /* TabBarViewController.swift */; };
 		A8AE7FA7238DF452007AC14B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA6238DF452007AC14B /* MapViewController.swift */; };
 		A8AE7FA9238F65CB007AC14B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE7FA8238F65CB007AC14B /* Models.swift */; };
 		A8D35FFE239452C900BEDB8C /* StateAdvisorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D35FFD239452C900BEDB8C /* StateAdvisorAPI.swift */; };
 		A8D3600123945A7200BEDB8C /* states.json in Resources */ = {isa = PBXBuildFile; fileRef = A8D35FFF23945A7200BEDB8C /* states.json */; };
 		A8D3600223945A7200BEDB8C /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = A8D3600023945A7200BEDB8C /* cities.json */; };
 		A8D360042394B39600BEDB8C /* PlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D360032394B39600BEDB8C /* PlacesAPI.swift */; };
+		A8EAFF7A2395E9B200414C96 /* CityDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EAFF792395E9B200414C96 /* CityDescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,13 +59,14 @@
 		A8873A902356493E00AA0365 /* StateAdvisorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAdvisorUITests.swift; sourceTree = "<group>"; };
 		A8873A922356493E00AA0365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8AE7FA2238DF2C4007AC14B /* StateDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDescriptionViewController.swift; sourceTree = "<group>"; };
-		A8AE7FA4238DF2EA007AC14B /* CityDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDescriptionViewController.swift; sourceTree = "<group>"; };
+		A8AE7FA4238DF2EA007AC14B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A8AE7FA6238DF452007AC14B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A8AE7FA8238F65CB007AC14B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		A8D35FFD239452C900BEDB8C /* StateAdvisorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAdvisorAPI.swift; sourceTree = "<group>"; };
 		A8D35FFF23945A7200BEDB8C /* states.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = states.json; path = ../../../../../Downloads/states.json; sourceTree = "<group>"; };
 		A8D3600023945A7200BEDB8C /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cities.json; path = ../../../../../Downloads/cities.json; sourceTree = "<group>"; };
 		A8D360032394B39600BEDB8C /* PlacesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAPI.swift; sourceTree = "<group>"; };
+		A8EAFF792395E9B200414C96 /* CityDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,8 @@
 				A8873A702356493B00AA0365 /* SceneDelegate.swift */,
 				A8873A722356493B00AA0365 /* StateViewController.swift */,
 				A8AE7FA2238DF2C4007AC14B /* StateDescriptionViewController.swift */,
-				A8AE7FA4238DF2EA007AC14B /* CityDescriptionViewController.swift */,
+				A8AE7FA4238DF2EA007AC14B /* TabBarViewController.swift */,
+				A8EAFF792395E9B200414C96 /* CityDescriptionViewController.swift */,
 				A8AE7FA6238DF452007AC14B /* MapViewController.swift */,
 				A8873A742356493B00AA0365 /* Main.storyboard */,
 				A8873A772356493D00AA0365 /* Assets.xcassets */,
@@ -285,7 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8AE7FA5238DF2EA007AC14B /* CityDescriptionViewController.swift in Sources */,
+				A8EAFF7A2395E9B200414C96 /* CityDescriptionViewController.swift in Sources */,
+				A8AE7FA5238DF2EA007AC14B /* TabBarViewController.swift in Sources */,
 				A8AE7FA7238DF452007AC14B /* MapViewController.swift in Sources */,
 				A8873A732356493B00AA0365 /* StateViewController.swift in Sources */,
 				A8D35FFE239452C900BEDB8C /* StateAdvisorAPI.swift in Sources */,

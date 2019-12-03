@@ -55,17 +55,14 @@ class StateDescriptionViewController: UIViewController {
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
             // get a reference to the second view controller
-            let cityDescriptionViewController = segue.destination as! CityDescriptionViewController
+            let tabBarViewController = segue.destination as! StateAdvTabBarViewController
 
             // set a variable in the second view controller with the data to pass
             
-          cityDescriptionViewController.city = cities![sender as! Int]
+          tabBarViewController.city = cities![sender as! Int]
         
         }
-
-    
 }
-    
     
     
 
