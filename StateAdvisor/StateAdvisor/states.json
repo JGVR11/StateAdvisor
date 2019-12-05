@@ -1,0 +1,262 @@
+[
+  {
+    "code": "AK",
+    "name": "Alaska",
+    "cityCount": 353
+  },
+  {
+    "code": "AL",
+    "name": "Alabama",
+    "cityCount": 584
+  },
+  {
+    "code": "AR",
+    "name": "Arkansas",
+    "cityCount": 537
+  },
+  {
+    "code": "AZ",
+    "name": "Arizona",
+    "cityCount": 446
+  },
+  {
+    "code": "CA",
+    "name": "California",
+    "cityCount": 1505
+  },
+  {
+    "code": "CO",
+    "name": "Colorado",
+    "cityCount": 455
+  },
+  {
+    "code": "CT",
+    "name": "Connecticut",
+    "cityCount": 112
+  },
+  {
+    "code": "DC",
+    "name": "District of Columbia",
+    "cityCount": 1
+  },
+  {
+    "code": "DE",
+    "name": "Delaware",
+    "cityCount": 77
+  },
+  {
+    "code": "FL",
+    "name": "Florida",
+    "cityCount": 910
+  },
+  {
+    "code": "GA",
+    "name": "Georgia",
+    "cityCount": 620
+  },
+  {
+    "code": "HI",
+    "name": "Hawaii",
+    "cityCount": 149
+  },
+  {
+    "code": "IA",
+    "name": "Iowa",
+    "cityCount": 1007
+  },
+  {
+    "code": "ID",
+    "name": "Idaho",
+    "cityCount": 226
+  },
+  {
+    "code": "IL",
+    "name": "Illinois",
+    "cityCount": 1364
+  },
+  {
+    "code": "IN",
+    "name": "Indiana",
+    "cityCount": 678
+  },
+  {
+    "code": "KS",
+    "name": "Kansas",
+    "cityCount": 670
+  },
+  {
+    "code": "KY",
+    "name": "Kentucky",
+    "cityCount": 537
+  },
+  {
+    "code": "LA",
+    "name": "Louisiana",
+    "cityCount": 474
+  },
+  {
+    "code": "MA",
+    "name": "Massachusetts",
+    "cityCount": 141
+  },
+  {
+    "code": "MD",
+    "name": "Maryland",
+    "cityCount": 514
+  },
+  {
+    "code": "ME",
+    "name": "Maine",
+    "cityCount": 41
+  },
+  {
+    "code": "MI",
+    "name": "Michigan",
+    "cityCount": 690
+  },
+  {
+    "code": "MN",
+    "name": "Minnesota",
+    "cityCount": 897
+  },
+  {
+    "code": "MO",
+    "name": "Missouri",
+    "cityCount": 1033
+  },
+  {
+    "code": "MS",
+    "name": "Mississippi",
+    "cityCount": 361
+  },
+  {
+    "code": "MT",
+    "name": "Montana",
+    "cityCount": 362
+  },
+  {
+    "code": "NC",
+    "name": "North Carolina",
+    "cityCount": 736
+  },
+  {
+    "code": "ND",
+    "name": "North Dakota",
+    "cityCount": 401
+  },
+  {
+    "code": "NE",
+    "name": "Nebraska",
+    "cityCount": 580
+  },
+  {
+    "code": "NH",
+    "name": "New Hampshire",
+    "cityCount": 38
+  },
+  {
+    "code": "NJ",
+    "name": "New Jersey",
+    "cityCount": 523
+  },
+  {
+    "code": "NM",
+    "name": "New Mexico",
+    "cityCount": 438
+  },
+  {
+    "code": "NV",
+    "name": "Nevada",
+    "cityCount": 131
+  },
+  {
+    "code": "NY",
+    "name": "New York",
+    "cityCount": 1079
+  },
+  {
+    "code": "OH",
+    "name": "Ohio",
+    "cityCount": 1204
+  },
+  {
+    "code": "OK",
+    "name": "Oklahoma",
+    "cityCount": 736
+  },
+  {
+    "code": "OR",
+    "name": "Oregon",
+    "cityCount": 377
+  },
+  {
+    "code": "PA",
+    "name": "Pennsylvania",
+    "cityCount": 1728
+  },
+  {
+    "code": "PR",
+    "name": "Puerto Rico",
+    "cityCount": 242
+  },
+  {
+    "code": "RI",
+    "name": "Rhode Island",
+    "cityCount": 32
+  },
+  {
+    "code": "SC",
+    "name": "South Carolina",
+    "cityCount": 394
+  },
+  {
+    "code": "SD",
+    "name": "South Dakota",
+    "cityCount": 392
+  },
+  {
+    "code": "TN",
+    "name": "Tennessee",
+    "cityCount": 426
+  },
+  {
+    "code": "TX",
+    "name": "Texas",
+    "cityCount": 1718
+  },
+  {
+    "code": "UT",
+    "name": "Utah",
+    "cityCount": 324
+  },
+  {
+    "code": "VA",
+    "name": "Virginia",
+    "cityCount": 586
+  },
+  {
+    "code": "VT",
+    "name": "Vermont",
+    "cityCount": 64
+  },
+  {
+    "code": "WA",
+    "name": "Washington",
+    "cityCount": 620
+  },
+  {
+    "code": "WI",
+    "name": "Wisconsin",
+    "cityCount": 771
+  },
+  {
+    "code": "WV",
+    "name": "West Virginia",
+    "cityCount": 404
+  },
+  {
+    "code": "WY",
+    "name": "Wyoming",
+    "cityCount": 201
+  }
+]
