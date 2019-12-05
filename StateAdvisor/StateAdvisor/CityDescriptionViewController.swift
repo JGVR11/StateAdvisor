@@ -12,39 +12,56 @@ import UIKit
 class CityDescriptionViewController: UIViewController {
     var city: City?
     var places: [Place]?
+    
     @IBOutlet var tableView: UITableView!
     
-    func refresh(){
+    
+    func refresh(city: City?, places: [Place]?){
+        self.city = city
+        self.places = places
+        DispatchQueue.main.async {
+            self.reloadScreen()
+        }
+    }
+    
+    func reloadScreen(){
+        if self.tableView == nil{
+            return
+        }
         self.tableView.reloadData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.reloadScreen()
+    }
+    
 }
 
 extension CityDescriptionViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlacesCell", for: indexPath)
-               cell.textLabel?.text! = places![indexPath.row].name
-               return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "placesCell", for: indexPath)
+        cell.textLabel?.text! = places![indexPath.row].name
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return places!.count
+        return places?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-      // Segue to the second view controller
-          self.performSegue(withIdentifier: "mapSegue", sender: indexPath.row)
+        
+        self.performSegue(withIdentifier: "mapSegue", sender: indexPath.row)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        // get a reference to the second view controller
         let mapViewController = segue.destination as! MapViewController
-
-        // set a variable in the second view controller with the data to pass
-      mapViewController.place = places![sender as! Int]
-    
+        
+        mapViewController.selectedPlace = places![sender as! Int]
+        mapViewController.city = self.city
+        mapViewController.places = self.places
+        
     }
     
 }

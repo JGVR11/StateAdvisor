@@ -24,6 +24,7 @@
 		A8D3600223945A7200BEDB8C /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = A8D3600023945A7200BEDB8C /* cities.json */; };
 		A8D360042394B39600BEDB8C /* PlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D360032394B39600BEDB8C /* PlacesAPI.swift */; };
 		A8EAFF7A2395E9B200414C96 /* CityDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EAFF792395E9B200414C96 /* CityDescriptionViewController.swift */; };
+		A8EAFF7C23989B0E00414C96 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EAFF7B23989B0D00414C96 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		A8D3600023945A7200BEDB8C /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cities.json; path = ../../../../../Downloads/cities.json; sourceTree = "<group>"; };
 		A8D360032394B39600BEDB8C /* PlacesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAPI.swift; sourceTree = "<group>"; };
 		A8EAFF792395E9B200414C96 /* CityDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDescriptionViewController.swift; sourceTree = "<group>"; };
+		A8EAFF7B23989B0D00414C96 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				A8AE7FA2238DF2C4007AC14B /* StateDescriptionViewController.swift */,
 				A8AE7FA4238DF2EA007AC14B /* TabBarViewController.swift */,
 				A8EAFF792395E9B200414C96 /* CityDescriptionViewController.swift */,
+				A8EAFF7B23989B0D00414C96 /* WebViewController.swift */,
 				A8AE7FA6238DF452007AC14B /* MapViewController.swift */,
 				A8873A742356493B00AA0365 /* Main.storyboard */,
 				A8873A772356493D00AA0365 /* Assets.xcassets */,
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8EAFF7A2395E9B200414C96 /* CityDescriptionViewController.swift in Sources */,
+				A8EAFF7C23989B0E00414C96 /* WebViewController.swift in Sources */,
 				A8AE7FA5238DF2EA007AC14B /* TabBarViewController.swift in Sources */,
 				A8AE7FA7238DF452007AC14B /* MapViewController.swift in Sources */,
 				A8873A732356493B00AA0365 /* StateViewController.swift in Sources */,

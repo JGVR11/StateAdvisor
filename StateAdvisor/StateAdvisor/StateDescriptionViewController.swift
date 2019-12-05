@@ -14,12 +14,6 @@ class StateDescriptionViewController: UIViewController {
     var state: State?
     var cities: [City]?
     
-    
-    
-   // func changeLabelText(){
-    //    stateDescriptionLabel.text = "Hello"
-  //  }
-    
     override func viewWillAppear(_ animated: Bool) {
         
         self.title = "Cities of \(state!.name) (\(state!.code))"
@@ -28,41 +22,35 @@ class StateDescriptionViewController: UIViewController {
     }
     
     
-    
 }
-    extension StateDescriptionViewController: UITableViewDataSource, UITableViewDelegate{
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return cities!.count
-       }
-
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+extension StateDescriptionViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cities!.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "citiesCell", for: indexPath)
         cell.textLabel?.text! = cities![indexPath.row].name
         
         return cell
     }
-//}
-
-//extension StateDescriptionViewController: UITableViewDelegate{
     
     // method to run when table view cell is tapped
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        // Segue to the second view controller
-            self.performSegue(withIdentifier: "citySegue", sender: indexPath.row)
-      }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-            // get a reference to the second view controller
-            let tabBarViewController = segue.destination as! StateAdvTabBarViewController
-
-            // set a variable in the second view controller with the data to pass
-            
-          tabBarViewController.city = cities![sender as! Int]
+        self.performSegue(withIdentifier: "citySegue", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        }
+        // get a reference to the second view controller
+        let tabBarViewController = segue.destination as! StateAdvTabBarViewController
+        
+        tabBarViewController.city = cities![sender as! Int]
+        tabBarViewController.state = self.state
+        
+    }
 }
-    
-    
+
+
 

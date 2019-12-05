@@ -48,6 +48,41 @@
             </objects>
             <point key="canvasLocation" x="210.1449275362319" y="-199.55357142857142"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="z4y-CT-vwj">
+            <objects>
+                <viewController id="eZt-jU-PbX" customClass="WebViewController" customModule="StateAdvisor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hyF-5m-qwv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQM-Ie-q8S">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fZA-hc-CSF" firstAttribute="bottom" secondItem="QQM-Ie-q8S" secondAttribute="bottom" id="EuL-fS-UJE"/>
+                            <constraint firstItem="fZA-hc-CSF" firstAttribute="trailing" secondItem="QQM-Ie-q8S" secondAttribute="trailing" id="Kcq-Ux-5qf"/>
+                            <constraint firstItem="QQM-Ie-q8S" firstAttribute="leading" secondItem="fZA-hc-CSF" secondAttribute="leading" id="PGr-Ao-ts8"/>
+                            <constraint firstItem="QQM-Ie-q8S" firstAttribute="top" secondItem="fZA-hc-CSF" secondAttribute="top" id="yfP-qD-tXq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fZA-hc-CSF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="psM-Yd-YcO"/>
+                    <connections>
+                        <outlet property="web" destination="QQM-Ie-q8S" id="TbB-Hg-w7V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLK-gJ-erk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1935" y="-946"/>
+        </scene>
         <!--State name-->
         <scene sceneID="Xgd-Ln-DFI">
             <objects>
@@ -106,11 +141,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0AB-JC-Bwk">
-                                <rect key="frame" x="0.0" y="331" width="414" height="482"/>
+                                <rect key="frame" x="0.0" y="209" width="414" height="604"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlacesCell" textLabel="YSM-A1-GFz" rowHeight="83" style="IBUITableViewCellStyleDefault" id="Bej-Pq-xat">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="placesCell" textLabel="YSM-A1-GFz" rowHeight="83" style="IBUITableViewCellStyleDefault" id="Bej-Pq-xat">
                                         <rect key="frame" x="0.0" y="28" width="414" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bej-Pq-xat" id="SU6-Uy-BiI">
@@ -131,24 +166,24 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xa8-Xq-bWh" id="xfi-1W-Qkm"/>
+                                    <outlet property="delegate" destination="Xa8-Xq-bWh" id="z4N-GP-sci"/>
+                                </connections>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CityImage" translatesAutoresizingMaskIntoConstraints="NO" id="9lc-GK-Cak">
-                                <rect key="frame" x="0.0" y="103" width="414" height="220"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="9lc-GK-Cak" secondAttribute="height" multiplier="79:42" id="0XV-rk-SWS"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="9lc-GK-Cak" firstAttribute="top" secondItem="0pl-qk-oKz" secondAttribute="top" constant="15" id="9D5-bz-yxr"/>
-                            <constraint firstItem="9lc-GK-Cak" firstAttribute="leading" secondItem="0pl-qk-oKz" secondAttribute="leading" id="P31-lV-7we"/>
-                            <constraint firstItem="0pl-qk-oKz" firstAttribute="trailing" secondItem="9lc-GK-Cak" secondAttribute="trailing" id="eqE-f1-kqd"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0pl-qk-oKz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="CIty Detail" id="Rqh-pG-Q9e"/>
-                    <navigationItem key="navigationItem" title="City" id="2PR-sM-fmx"/>
+                    <navigationItem key="navigationItem" title="City" id="2PR-sM-fmx">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="XX4-WG-dUp">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uL5-7a-fMQ">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0AB-JC-Bwk" id="BDe-Ol-i5a"/>
                     </connections>
@@ -180,7 +215,19 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sZS-rz-Vi9" customClass="StateAdvTabBarViewController" customModule="StateAdvisor" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="City Name" id="IWA-ua-GhX"/>
+                    <navigationItem key="navigationItem" title="City Name" id="IWA-ua-GhX">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="64A-Pp-CCL">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l15-GB-iYc">
+                                <rect key="frame" x="284" y="7" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="City Description"/>
+                            </button>
+                            <connections>
+                                <action selector="cityDescription:" destination="sZS-rz-Vi9" id="Vz1-YZ-IKf"/>
+                                <segue destination="eZt-jU-PbX" kind="show" identifier="webSegue" id="Xi5-Zm-8td"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h4W-3o-XAk">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -193,7 +240,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1w-S0-U4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="-162"/>
+            <point key="canvasLocation" x="1936" y="-200"/>
         </scene>
         <!--Map-->
         <scene sceneID="nFS-ss-pxZ">
@@ -203,8 +250,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </mapView>
-                    <tabBarItem key="tabBarItem" title="Map" selectedImage="Map" id="CMW-44-FIq"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Map" selectedImage="Map" id="CMW-44-FIq"/>
                     <navigationItem key="navigationItem" id="Vge-rl-wNl"/>
+                    <connections>
+                        <outlet property="mapView" destination="tEx-Or-GWM" id="NSf-ge-wwR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tr7-8r-17W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,10 +262,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CityImage" width="1118" height="838.5"/>
         <image name="Map" width="48.5" height="32.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="454-vu-sas"/>
+        <segue reference="PzY-js-jbR"/>
     </inferredMetricsTieBreakers>
 </document>

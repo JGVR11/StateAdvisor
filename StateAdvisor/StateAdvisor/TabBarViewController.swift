@@ -11,8 +11,22 @@ import UIKit
 
 class StateAdvTabBarViewController: UITabBarController {
     
+    var state: State?
     var city: City?
     var places: [Place]?
+    
+    @IBAction func cityDescription(_ sender: Any) {
+        self.performSegue(withIdentifier: "webSegue", sender: sender)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "webSegue"{
+            let webViewController = segue.destination as! WebViewController
+            webViewController.city = self.city
+            webViewController.state = self.state
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -23,17 +37,14 @@ class StateAdvTabBarViewController: UITabBarController {
             case .success(let places):
                 self.places = places
                 for vc in self.viewControllers!{
-                  if vc is MapViewController{
-                    (vc as! MapViewController).places = self.places
-                    (vc as! MapViewController).city = self.city
+                    if vc is MapViewController{
+                        (vc as! MapViewController).refresh(city: self.city, places: self.places)
+                    }
+                    else if vc is CityDescriptionViewController{
+                        (vc as! CityDescriptionViewController).refresh(city: self.city, places: self.places)
+                    }
+                    
                 }
-                else if vc is CityDescriptionViewController{
-                    (vc as! CityDescriptionViewController).city = self.city
-                    (vc as! CityDescriptionViewController).places = self.places
-                    (vc as! CityDescriptionViewController).refresh()
-                }
-                
-            }
             case .failure(let error):
                 print("fetch error = \(error)")
             }

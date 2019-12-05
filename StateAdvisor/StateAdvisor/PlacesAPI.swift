@@ -9,22 +9,20 @@
 import Foundation
 
 struct Response: Decodable {
-    var results: [ResponsePlace]
+    var businesses: [ResponsePlace]
 }
 
 struct ResponsePlace: Decodable {
-    var place_id: String
+    var id: String
     var name: String
-    var geometry: ResponseGeometry
+    var image_url: String
+    var rating: Double
+    var coordinates: ResponseCoordinates
 }
 
-struct ResponseGeometry: Decodable {
-    var location: ResponseLocation
-}
-
-struct ResponseLocation: Decodable {
-    var lat: Double
-    var lng: Double
+struct ResponseCoordinates: Decodable {
+    var latitude: Double
+    var longitude: Double
 }
 
 typealias Result = Swift.Result<[Place], Error>
@@ -33,28 +31,29 @@ typealias ResultClosure = (Result) -> Void
 
 class PlacesAPI{
     
-    private static let apiKey = "AIzaSyBlDd-Jny8xl7sjrTq4wbf5m1IcTpprBdE"
-    private static let radius = 250
-    private static let rankBy = "prominence"
+    private static let apiKey = "Bearer Tcnm-MuKqUob9Kxn6RG-qzHvTJs_74WP-GHOtZu7R6a-kHKP5Ce04XwEjFdJriqo1iX7KoijhWEX6ZuavyaM7TMwrtOKhJJUatVpohkdQegWyVLou2nd_KNhNWXoXXYx"
+    private static let radius = 1000
+    private static let limit = 25
     
     
     static func findNearbyPlaces(city: City, completion: @escaping ResultClosure){
-        var components = URLComponents(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json")
+        var components = URLComponents(string: "https://api.yelp.com/v3/businesses/search")
         
         var queryItems = [URLQueryItem]()
-        let keyQueryItem = URLQueryItem(name: "key", value: apiKey)
-        queryItems.append(keyQueryItem)
-        let locationQueryItem = URLQueryItem(name: "location", value: "\(city.latitude),\(city.longitude)")
-        queryItems.append(locationQueryItem)
+        let latitudeQueryItem = URLQueryItem(name: "latitude", value: String(city.latitude))
+        queryItems.append(latitudeQueryItem)
+        let longitudeQueryItem = URLQueryItem(name: "longitude", value: String(city.longitude))
+        queryItems.append(longitudeQueryItem)
         let radiusQueryItem = URLQueryItem(name: "radius", value: String(radius))
         queryItems.append(radiusQueryItem)
-        let rankByQueryItem = URLQueryItem(name: "rankby", value: rankBy)
-        queryItems.append(rankByQueryItem)
+        let limitQueryItem = URLQueryItem(name: "limit", value: String(limit))
+        queryItems.append(limitQueryItem)
         
         
         components?.queryItems = queryItems
         
-        let request = URLRequest(url: components!.url!)
+        var request = URLRequest(url: components!.url!)
+        request.setValue(apiKey, forHTTPHeaderField: "Authorization")
         let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
             let result: Result
             
@@ -68,7 +67,7 @@ class PlacesAPI{
                 do{
                     
                     let response = try decoder.decode(Response.self, from: data)
-                    let places = response.results.map{ Place( name: $0.name, longitude: $0.geometry.location.lng, latitude: $0.geometry.location.lat, id: $0.place_id)}
+                    let places = response.businesses.map{ Place( name: $0.name, longitude: $0.coordinates.longitude, latitude: $0.coordinates.latitude, id: $0.id)}
                     result = Result.success(places)
                 }catch{
                     result = Result.failure(error)
