@@ -47,7 +47,6 @@ extension StateDescriptionViewController: UITableViewDataSource, UITableViewDele
         let tabBarViewController = segue.destination as! StateAdvTabBarViewController
         
         tabBarViewController.city = cities![sender as! Int]
-        tabBarViewController.state = self.state
         
     }
 }

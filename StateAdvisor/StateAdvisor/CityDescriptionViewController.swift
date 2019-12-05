@@ -14,8 +14,7 @@ class CityDescriptionViewController: UIViewController {
     var places: [Place]?
     
     @IBOutlet var tableView: UITableView!
-    
-    
+        
     func refresh(city: City?, places: [Place]?){
         self.city = city
         self.places = places
@@ -35,7 +34,6 @@ class CityDescriptionViewController: UIViewController {
         super.viewWillAppear(animated)
         self.reloadScreen()
     }
-    
 }
 
 extension CityDescriptionViewController: UITableViewDataSource, UITableViewDelegate{

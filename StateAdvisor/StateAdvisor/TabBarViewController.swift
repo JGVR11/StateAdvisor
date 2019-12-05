@@ -10,23 +10,9 @@ import Foundation
 import UIKit
 
 class StateAdvTabBarViewController: UITabBarController {
-    
-    var state: State?
     var city: City?
     var places: [Place]?
     
-    @IBAction func cityDescription(_ sender: Any) {
-        self.performSegue(withIdentifier: "webSegue", sender: sender)
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "webSegue"{
-            let webViewController = segue.destination as! WebViewController
-            webViewController.city = self.city
-            webViewController.state = self.state
-        }
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
